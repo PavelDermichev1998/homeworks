@@ -1,0 +1,32 @@
+.button {
+    cursor: pointer;
+    background-color: #3fa4e3;
+    border-radius: 5px;
+    color: white;
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.button:hover {
+    box-shadow: 0 0 40px 40px #ffffff inset;
+    color: black;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+.button:disabled:hover {
+    box-shadow: none;
+    color: white;
+}
+
+.default {
+
+}
+
+.red {
+    background: red;
+}
+.red:hover {
+    color: red;
+}

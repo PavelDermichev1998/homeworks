@@ -1,0 +1,19 @@
+.main {
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorTest {
+    color: red;
+    font-size: 12px;
+    padding: 0 5px 0 5px;
+}
+
+.totalUsers {
+    padding-left: 5px;
+}

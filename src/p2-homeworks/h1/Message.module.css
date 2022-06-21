@@ -1,0 +1,44 @@
+.message {
+    display: flex;
+    justify-content: left;
+    background-color: darkgrey;
+    position: relative;
+}
+
+.img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.angle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, gold 0);
+    left: 65px;
+    bottom: 10px;
+}
+
+.message_container {
+    background-color: gold;
+    width: 300px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px 10px 10px 0;
+}
+
+.name {
+    padding-left: 10px;
+}
+
+.message_text {
+    padding-left: 10px;
+}
+
+.message_time {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: rgba(94, 143, 69, 0.51);
+}
