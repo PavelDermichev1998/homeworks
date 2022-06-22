@@ -4,8 +4,6 @@ import {PATH} from './Pages'
 import style from './Header.module.css'
 
 function Header() {
-
-
     return (
         <div className={style.header}>
             <NavLink to={PATH.PRE_JUNIOR}
