@@ -1,0 +1,10 @@
+.select {
+    margin: 10px;
+    min-width: 100px;
+    color: #a0e9ff;
+    background: #050000;
+}
+
+.option {
+    background: #050000;
+}
