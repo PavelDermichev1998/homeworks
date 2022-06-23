@@ -5,9 +5,9 @@ export const homeWorkReducer = (state: Array<UserType>, action: { type: string, 
         case 'sort': {
             const stateCopy = [...state]
             if (action.payload === 'up') {
-                return stateCopy.sort((a, b) => a.age < b.age ? 1 : -1)
+                return stateCopy.sort((a, b) => a.name.length < b.name.length ? 1 : -1)
             } else {
-                return stateCopy.sort((a, b) => a.age > b.age ? 1 : -1)
+                return stateCopy.sort((a, b) => a.name.length > b.name.length ? 1 : -1)
             }
         }
         case 'check': {
