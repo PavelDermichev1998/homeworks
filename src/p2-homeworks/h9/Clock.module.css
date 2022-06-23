@@ -1,9 +1,10 @@
 .main_container {
     margin: 10px;
+    height: 100px;
 }
 
 .time {
-    width: 100px;
+    max-width: 100px;
     background: #7ce1e1;
     padding: 5px;
     border-radius: 5px;
@@ -11,7 +12,12 @@
 
 .date {
     background: #7aafd9;
-    width: 100px;
+    max-width: 100px;
     padding: 5px;
     border-radius: 5px;
+}
+
+.buttons {
+    position:absolute;
+    bottom: 30px;
 }

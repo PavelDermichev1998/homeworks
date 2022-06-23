@@ -4,15 +4,8 @@ import style from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>(new Date())
+    const [date, setDate] = useState<Date>()
     const [show, setShow] = useState<boolean>(false)
-
-    const addZero = (value: number) => {
-        if (value < 10) {
-           return '0' + value
-        }
-        return value
-    }
 
     const stop = () => {
         clearInterval(timerId)
@@ -32,32 +25,33 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = addZero(date.getHours()) + ':'
-        + addZero(date.getMinutes()) + ':'
-        + addZero(date.getSeconds())
-
-    const stringDate = addZero(date.getDate()) + '.'
-        + addZero(date.getMonth() + 1) + '.'
-        + date.getFullYear()
+    const stringTime = date?.toLocaleTimeString() || <br/>
+    const stringDate = date?.toLocaleDateString() || <br/>
 
     return (
         <div className={style.main_container}>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-                className={style.time}
-            >
-                {stringTime}
-            </div>
+            {
+                date &&
+                <div
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    className={style.time}
+                >
+                    {stringTime}
+                </div>
+            }
 
             {show && (
                 <div className={style.date}>
                     {stringDate}
                 </div>
-            )}
+            )
+            }
+            <div className={style.buttons}>
+                <SuperButton onClick={start}>start</SuperButton>
+                <SuperButton onClick={stop}>stop</SuperButton>
+            </div>
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
 
         </div>
     )
