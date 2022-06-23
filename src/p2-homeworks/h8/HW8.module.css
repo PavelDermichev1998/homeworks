@@ -1,0 +1,9 @@
+.people_container {
+    margin: 10px;
+}
+
+.people {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+}
